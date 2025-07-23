@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Usuarios registrados - SportPress</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'clientes/styles.css' %}">
+    <script src="{% static 'clientes/script.js' %}" defer></script>
+</head>
+<body>
+    <header>
+        <h1>SportPress</h1>
+        <p>Lista de usuarios registrados</p>
+    </header>
+
+    <nav>
+        <a href="{% url 'landing' %}">Inicio</a>
+        <a href="{% url 'formulario' %}">Registrar usuario</a>
+    </nav>
+
+    <main style="max-width: 800px; margin: 40px auto;">
+        <table style="width: 100%; border-collapse: collapse; background-color: #1f1f1f;">
+            <thead style="background-color: #c8102e;">
+                <tr>
+                    <th style="padding: 12px; text-align: left;">ID</th>
+                    <th style="padding: 12px; text-align: left;">Nombre</th>
+                    <th style="padding: 12px; text-align: left;">Email</th>
+                </tr>
+            </thead>
+            <tbody>
+    {% for usuario in usuarios %}
+    <tr style="border-bottom: 1px solid #444;">
+        <td style="padding: 10px;">{{ usuario.0 }}</td>
+        <td style="padding: 10px;">{{ usuario.1 }}</td>
+        <td style="padding: 10px;">{{ usuario.2 }}</td>
+    </tr>
+    {% empty %}
+    <tr>
+        <td colspan="3" style="padding: 10px; text-align: center; color: #ccc;">
+            No hay usuarios registrados.
+        </td>
+    </tr>
+    {% endfor %}
+</tbody>
+
+
+        </table>
+    </main>
+
+    <footer>
+        sigo odiando django jaja
+    </footer>
+</body>
+</html>

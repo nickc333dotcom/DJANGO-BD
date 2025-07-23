@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Registrar usuario - SportPress</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'clientes/styles.css' %}">
+    <script src="{% static 'clientes/script.js' %}" defer></script>
+</head>
+<body>
+    <header>
+        <h1>SportPress</h1>
+        <p>Registro de usuarios</p>
+    </header>
+
+    <nav>
+        <a href="{% url 'landing' %}">Inicio</a>
+        <a href="{% url 'listado' %}">Usuarios registrados</a>
+    </nav>
+
+    <main style="max-width: 500px; margin: 40px auto; background-color: #1f1f1f; padding: 30px; border-radius: 10px;">
+        <form method="POST">
+            {% csrf_token %}
+            <label for="nombre">Nombre:</label><br>
+            <input type="text" id="nombre" name="nombre" required><br><br>
+
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email" required><br><br>
+
+            <button type="submit" style="padding: 10px 20px; background-color: #c8102e; color: white; border: none; border-radius: 5px;">
+                Registrar
+            </button>
+        </form>
+    </main>
+
+    {% if error %}
+    <div style="color: red;">
+        <strong>Error:</strong> {{ error }}
+    </div>
+    {% endif %}
+
+    <footer>
+        sigo odiando django
+    </footer>
+</body>
+</html>

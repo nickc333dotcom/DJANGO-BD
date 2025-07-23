@@ -1,0 +1,105 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #0a0a0a;
+  color: #ffffff;
+}
+
+header {
+  background-color: #c8102e;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 0 20px #ff0000;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 48px;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+
+header p {
+  margin: 5px 0 0;
+  color: #ffd700;
+}
+
+nav {
+  background-color: #1d1d1d;
+  display: flex;
+  justify-content: center;
+  padding: 10px 0;
+  border-bottom: 2px solid #c8102e;
+}
+
+nav a {
+  color: #ffffff;
+  text-decoration: none;
+  margin: 0 20px;
+  font-weight: bold;
+  position: relative;
+}
+
+nav a::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  background-color: #ff0000;
+  bottom: -5px;
+  left: 0;
+  transition: 0.3s ease;
+}
+
+nav a:hover::after {
+  width: 100%;
+}
+
+main {
+  padding: 30px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.article-card {
+  background-color: #1f1f1f;
+  border: 1px solid #444;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.article-card:hover {
+  transform: scale(1.02);
+}
+
+.article-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.article-card .content {
+  padding: 15px;
+}
+
+.article-card .content h2 {
+  font-size: 20px;
+  margin-top: 0;
+  color: #ffcc00;
+}
+
+.article-card .content p {
+  font-size: 14px;
+  color: #ccc;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #0d0d0d;
+  color: #999;
+  font-size: 14px;
+  margin-top: 30px;
+}
