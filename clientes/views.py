@@ -1,16 +1,16 @@
 # clientes/views.py
-import psycopg
+import psycopg2
 from django.shortcuts import render, redirect
 from django.conf import settings
 
 # Configuración de conexión
 def get_connection():  #codigo para establecer la conexion desde views.py
-    return psycopg.connect(
+    return psycopg2.connect(
         host="localhost",
         port="5432",
         dbname="base",
-        user="postgres",
-        password="Foxica12"
+        user="user",
+        password="1234"
     )
 
 def landing(request):
