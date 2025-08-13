@@ -2,42 +2,18 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Inicio - SportPress</title>
+    <title>landing</title>
     {% load static %}
     <link rel="stylesheet" href="{% static 'clientes/styles.css' %}">
-    <script src="{% static 'clientes/script.js' %}" defer></script>
 </head>
 <body>
     <header>
-        <h1>SportPress</h1>
-        <p>Tu fuente confiable de noticias deportivas</p>
+        <h1>landing</h1>
     </header>
 
     <nav>
-        <a href="{% url 'formulario' %}">Registrar usuario</a>
-        <a href="{% url 'listado' %}">Usuarios registrados</a>
+        <a href="{% url 'formulario' %}">registro</a>
+        <a href="{% url 'listado' %}">ver registros</a>
     </nav>
-
-    <main>
-        <div class="article-card">
-            <img src="{% static 'clientes/img/futbol.jpeg' %}" alt="Noticia de fútbol">
-            <div class="content">
-                <h2>hola</h2>
-                <p>hola .</p>
-            </div>
-        </div>
-        <div class="article-card">
-            <img src="{% static 'clientes/img/futbol.jpeg' %}" alt="Noticia de baloncesto">
-            <div class="content">
-                <h2>adios</h2>
-                <p>chao.</p>
-            </div>
-        </div>
-        <!-- Puedes agregar más cards aquí -->
-    </main>
-
-    <footer>
-         odio django
-    </footer>
 </body>
 </html>
