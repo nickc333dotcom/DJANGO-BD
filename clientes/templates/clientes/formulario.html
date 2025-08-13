@@ -13,21 +13,21 @@
     </header>
 
     <nav>
-        <a href="{% url 'landing' %}">Inicio</a>
-        <a href="{% url 'listado' %}">Usuarios registrados</a>
+        <a href="{% url 'landing' %}">inicio</a>
+        <a href="{% url 'listado' %}">usuarios registrados</a>
     </nav>
 
     <main style="max-width: 500px; margin: 40px auto; background-color: #1f1f1f; padding: 30px; border-radius: 10px;">
         <form method="POST">
             {% csrf_token %}
-            <label for="nombre">Nombre:</label><br>
+            <label for="nombre">nombre:</label><br>
             <input type="text" id="nombre" name="nombre" required><br><br>
 
-            <label for="email">Email:</label><br>
+            <label for="email">email:</label><br>
             <input type="email" id="email" name="email" required><br><br>
 
             <button type="submit" style="padding: 10px 20px; background-color: #c8102e; color: white; border: none; border-radius: 5px;">
-                Registrar
+                registrar
             </button>
         </form>
     </main>
