@@ -77,8 +77,8 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': 'base',
-        'USER': 'postgres',
-        'PASSWORD':'Foxica12',
+        'USER': 'user',
+        'PASSWORD':'1234',
         'HOST':'localhost',
         'PORT':'5432',
     }
