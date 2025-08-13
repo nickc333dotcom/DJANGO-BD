@@ -2,15 +2,13 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Usuarios registrados - SportPress</title>
+    <title>registros</title>
     {% load static %}
     <link rel="stylesheet" href="{% static 'clientes/styles.css' %}">
-    <script src="{% static 'clientes/script.js' %}" defer></script>
 </head>
 <body>
     <header>
-        <h1>SportPress</h1>
-        <p>Lista de usuarios registrados</p>
+        <h1>usuarios</h1>
     </header>
 
     <nav>
@@ -37,7 +35,6 @@
     {% empty %}
     <tr>
         <td colspan="3" style="padding: 10px; text-align: center; color: #ccc;">
-            No hay usuarios registrados.
         </td>
     </tr>
     {% endfor %}
@@ -46,9 +43,5 @@
 
         </table>
     </main>
-
-    <footer>
-        sigo odiando django jaja
-    </footer>
 </body>
 </html>
